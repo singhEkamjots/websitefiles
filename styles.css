@@ -6,9 +6,18 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #1E90FF; /* Dodger Blue */
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 nav ul {
@@ -19,18 +28,29 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #fff;
+    color: #1E90FF;
 }
 
 section {
-    padding: 20px;
+    padding: 40px;
+}
+
+h1 {
+    margin: 0;
 }
 
 h2 {
-    color: #333;
+    color: #1E90FF; /* Dodger Blue */
 }
