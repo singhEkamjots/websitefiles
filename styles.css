@@ -4,13 +4,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
-    height: 200pxl;
     color: #333;
 }
 
 header {
     background-color: #333;
-    padding: 0; 
+    padding: 0; /* Remove top and bottom padding */
     text-align: center;
 }
 
@@ -48,6 +47,7 @@ nav ul li a:hover {
 
 h1 {
     margin: 20px 0;
+    color: #fff; /* Change text color to white */
 }
 
 #intro {
