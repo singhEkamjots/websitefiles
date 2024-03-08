@@ -9,7 +9,7 @@ body {
 
 header {
     background-color: #333;
-    padding: 0; /* Remove top and bottom padding */
+    padding: 0;
     text-align: center;
 }
 
@@ -47,14 +47,14 @@ nav ul li a:hover {
 
 h1 {
     margin: 20px 0;
-    color: #fff; /* Change text color to white */
+    color: #fff; 
 }
 
 #intro {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 20px 0; /* Reduce top and bottom padding */
+    padding: 20px 0; 
 }
 
 #intro img {
