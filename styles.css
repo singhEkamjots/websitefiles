@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #2a2a2a; /* Updated background color for better contrast */
+    background-color: #1a1a1a; /* Darker background color for better contrast */
     color: #fff;
 }
 
@@ -11,7 +11,7 @@ header {
     background-color: #333;
     padding: 0;
     text-align: center;
-    position: relative; /* Added position relative for absolute positioning */
+    position: relative;
 }
 
 nav ul {
@@ -54,6 +54,17 @@ h1 {
 .big-text {
     margin-top: 20px;
     text-align: center;
+    opacity: 0; /* Initial opacity set to 0 */
+    animation: fadeIn 1s ease forwards; /* Animation for fade-in effect */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .big-text p {
