@@ -21,7 +21,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-left: 30px; /* Increased margin */
+    margin-left: 30px;
 }
 
 nav ul li:first-child {
@@ -31,14 +31,13 @@ nav ul li:first-child {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    padding: 15px 20px; /* Increased padding */
+    padding: 10px 15px; 
     border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease, margin-top 0.3s ease; 
+    transition: background-color 0.3s ease; 
 }
 
 nav ul li a:hover {
-    background-color: #555;
-    transform: translateY(-5px); 
+    background-color: #555; 
 }
 
 .container {
@@ -55,14 +54,14 @@ h1 {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 40px 0; 
+    padding: 40px 0;
 }
 
 #intro img {
     border-radius: 50%;
     width: 150px;
     height: 100px;
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
 nav a img {
