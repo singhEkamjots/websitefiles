@@ -21,7 +21,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 nav ul li:first-child {
@@ -31,18 +31,18 @@ nav ul li:first-child {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    padding: 10px 15px; 
+    padding: 10px 20px;
     border-radius: 5px;
-    transition: background-color 0.3s ease; 
+    transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #555; 
+    background-color: #555;
 }
 
 .container {
     max-width: 1000px;
-    margin: 20px auto 0; 
+    margin: 0 auto;
 }
 
 h1 {
@@ -54,18 +54,23 @@ h1 {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 40px 0;
+    padding: 20px 0;
 }
 
 #intro img {
     border-radius: 50%;
     width: 150px;
     height: 100px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 nav a img {
     width: 30px;
     height: auto;
     margin-top: 10px;
+}
+
+main {
+    max-height: calc(100vh - 120px); 
+    overflow-y: auto;
 }
