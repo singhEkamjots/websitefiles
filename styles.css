@@ -71,6 +71,6 @@ nav a img {
 }
 
 main {
-    min-height: calc(100vh - 80px); 
+    height: 2000px; 
     overflow-y: auto;
 }
