@@ -99,14 +99,8 @@ main {
     overflow-y: auto;
 }
 
-/* Add borders to each section */
-section {
-    border: 2px solid #333;
-    padding: 20px;
-    margin: 20px 0;
-}
 
 /* Add borders around the profile picture */
 header img {
-    border: 2px solid #fff;
+    border: 2px solid blue;
 }
