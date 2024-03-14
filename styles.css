@@ -62,6 +62,7 @@ h1 {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -82,8 +83,9 @@ h1 {
 #intro img {
     border-radius: 50%;
     width: 150px;
-    height: 100px;
+    height: 150px;
     margin-top: 10px;
+    border: 2px solid #fff; /* Adding a white border around the profile picture */
 }
 
 nav a img {
@@ -95,4 +97,16 @@ nav a img {
 main {
     height: 2000px;
     overflow-y: auto;
+}
+
+/* Add borders to each section */
+section {
+    border: 2px solid #333;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Add borders around the profile picture */
+header img {
+    border: 2px solid #fff;
 }
