@@ -102,6 +102,10 @@ main {
 
 
 
+.passion-text {
+    color: #ADD8E6; /* Light blue color */
+}
+
 /* Add borders around the profile picture */
 header img {
     border: 2px solid #fff;
