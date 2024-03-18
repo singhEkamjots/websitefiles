@@ -34,6 +34,12 @@ function type() {
     }
 }
 
+
+
+
+
+
+
 type();
 
 // 4. Create a lightbox gallery for portfolio images (requires additional HTML and CSS)
