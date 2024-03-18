@@ -51,13 +51,58 @@ h1 {
     color: #fff;
 }
 
-#about {
-    padding-top: 50px; /* Add padding to separate passion text from the about content */
+.big-text {
+    margin-top: 20px;
+    text-align: center;
+    opacity: 0; /* Initial opacity set to 0 */
+    animation: fadeIn 1s ease forwards; /* Animation for fade-in effect */
 }
 
-.passion-text {
-    font-size: 24px; /* Increase font size */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.big-text p {
+    font-size: 24px;
     line-height: 1.5;
+}
+
+#intro {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#intro img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+    border: 2px solid #fff; /* Adding a white border around the profile picture */
+}
+
+nav a img {
+    width: 30px;
+    height: auto;
+    margin-top: 10px;
+    border: none;
+}
+
+main {
+    height: 2000px;
+    overflow-y: auto;
+}
+
+
+
+.passion-text {
     color: #ADD8E6; /* Light blue color */
 }
 
