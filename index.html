@@ -36,16 +36,15 @@
         <!-- Button to toggle between categories -->
         <button onclick="toggleDescription('education')">Education</button>
         <button onclick="toggleDescription('knowledge')">Knowledge</button>
-        <button onclick="toggleDescription('aspirations')">Aspirations</button>
 
         <!-- Description for Education -->
         <p id="education-description" style="display: none;" class="category-description">I am deeply passionate about computer science and cybersecurity, and I am excited to embark on this journey and will be obtaining my High School Diploma in June.</p>
 
         <!-- Description for Knowledge -->
         <p id="knowledge-description" style="display: none;" class="category-description">I have increasing my skills in C#, Java, Python and learning bases like Microsoft Power Platform, Azure, and Adobe as well.</p>
-        <p id="aspirations-description" style="display: none;" class="category-description">I aspire to be a computer scientist and would like to make amazing revolutions in the tech industry using my knowledge!</p>
     </div>
 </section>
+
 
         <section id="skills">
             <!-- Your skills content goes here -->
@@ -57,53 +56,24 @@
             <!-- Your contact form goes here -->
         </section>
     </main>
-    <script>
-        function toggleDescription(category) {
-            // Hide all descriptions
-            var descriptions = document.getElementsByClassName("category-description");
-            for (var i = 0; i < descriptions.length; i++) {
-                descriptions[i].style.display = "none";
-            }
-    
-            // Show the description for the clicked category
-            var description = document.getElementById(category + "-description");
-            if (description) {
-                description.style.display = "block";
-            }
+    <!-- Your HTML content -->
+
+<script>
+    function toggleDescription(category) {
+        // Hide all descriptions
+        var descriptions = document.getElementsByClassName("category-description");
+        for (var i = 0; i < descriptions.length; i++) {
+            descriptions[i].style.display = "none";
         }
-    </script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-    
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-    
-    
-    window.addEventListener('scroll', function() {
-        const header = document.querySelector('header');
-        if (window.scrollY > 100) {
-            header.style.backgroundColor = '#222'; // Change to a darker color when scrolled
-        } else {
-            header.style.backgroundColor = '#333'; // Change back to original color when scrolled back to the top
-        }
-    });
-    
-    
-    const introText = document.querySelector('.big-text p');
-    const text = "I am a student who has a passion for computer science as well as cybersecurity. I will be attending the University of Virginia to get my Bachelor of Science in Computer Science.";
-    let index = 0;
-    
-    function type() {
-        if (index < text.length) {
-            introText.textContent += text.charAt(index);
-            index++;
-            setTimeout(type, 50); // Adjust typing speed (milliseconds)
+
+        // Show the description for the clicked category
+        var description = document.getElementById(category + "-description");
+        if (description) {
+            description.style.display = "block";
         }
     }
-    
+</script>
+
+<!-- Remaining HTML content -->
 </body>
 </html>
