@@ -107,12 +107,9 @@
     } else {
         console.log("Typing animation completed");
         // Typing animation for "I love coding!"
-        const loveCodingText = document.createElement('p');
-        loveCodingText.textContent = "I love coding!";
-        introText.appendChild(loveCodingText);
+        introText.textContent += " I love coding!"; // Append directly to the introText div
     }
 }
-
 
         // Call the type function to start typing effect
         type();
