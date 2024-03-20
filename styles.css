@@ -54,9 +54,9 @@ h1 {
 .big-text {
     margin-top: 20px;
     text-align: center;
-    opacity: 0; /* Initial opacity set to 0 */
-    animation: fadeIn 1s ease forwards; /* Animation for fade-in effect */
 }
+
+
 
 @keyframes fadeIn {
     from {
