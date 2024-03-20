@@ -98,17 +98,21 @@
         const text = "I am a student who has a passion for computer science as well as cybersecurity. I will be attending the University of Virginia to get my Bachelor of Science in Computer Science.";
         let index = 0;
         function type() {
-            if (index < text.length) {
-                introText.textContent += text.charAt(index);
-                index++;
-                setTimeout(type, 50); // Adjust typing speed (milliseconds)
-            } else {
-                // Typing animation for "I love coding!"
-                const loveCodingText = document.createElement('p');
-                loveCodingText.textContent = "I love coding!";
-                introText.appendChild(loveCodingText);
-            }
-        }
+    console.log("Typing function called");
+    if (index < text.length) {
+        introText.textContent += text.charAt(index);
+        console.log("Current text content:", introText.textContent);
+        index++;
+        setTimeout(type, 50); // Adjust typing speed (milliseconds)
+    } else {
+        console.log("Typing animation completed");
+        // Typing animation for "I love coding!"
+        const loveCodingText = document.createElement('p');
+        loveCodingText.textContent = "I love coding!";
+        introText.appendChild(loveCodingText);
+    }
+}
+
 
         // Call the type function to start typing effect
         type();
