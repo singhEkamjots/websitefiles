@@ -86,7 +86,32 @@ h1 {
     margin-top: 10px;
     border: 2px solid #fff; /* Adding a white border around the profile picture */
 }
-
+.skills-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .skill-card {
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .skill-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .skill-card h3 {
+    font-size: 18px;
+  }  
+  
 nav a img {
     width: 30px;
     height: auto;
