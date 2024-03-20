@@ -5,51 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ekamjot Singh's Profile Page</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-    <script>
-        function toggleDescription(category) {
-            // Hide all descriptions
-            var descriptions = document.getElementsByClassName("category-description");
-            for (var i = 0; i < descriptions.length; i++) {
-                descriptions[i].style.display = "none";
-            }
-            // Show the description for the clicked category
-            var description = document.getElementById(category + "-description");
-            if (description) {
-                description.style.display = "block";
-            }
-        }
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.backgroundColor = '#222'; // Change to a darker color when scrolled
-            } else {
-                header.style.backgroundColor = '#333'; // Change back to original color when scrolled back to the top
-            }
-        });
-
-        const introText = document.querySelector('.big-text p');
-        const text = "I am a student who has a passion for computer science as well as cybersecurity. I will be attending the University of Virginia to get my Bachelor of Science in Computer Science.";
-        let index = 0;
-        function type() {
-            if (index < text.length) {
-                introText.textContent += text.charAt(index);
-                index++;
-                setTimeout(type, 50); // Adjust typing speed (milliseconds)
-            }
-        }
-
-        // Call the type function to start typing effect
-        type();
-    </script>
 </head>
 <body>
     <header>
@@ -96,5 +51,49 @@
             <!-- Your contact form goes here -->
         </section>
     </main>
+    <script>
+        function toggleDescription(category) {
+            // Hide all descriptions
+            var descriptions = document.getElementsByClassName("category-description");
+            for (var i = 0; i < descriptions.length; i++) {
+                descriptions[i].style.display = "none";
+            }
+            // Show the description for the clicked category
+            var description = document.getElementById(category + "-description");
+            if (description) {
+                description.style.display = "block";
+            }
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = '#222'; // Change to a darker color when scrolled
+            } else {
+                header.style.backgroundColor = '#333'; // Change back to original color when scrolled back to the top
+            }
+        });
+
+        const introText = document.querySelector('.big-text p');
+        const text = "I am a student who has a passion for computer science as well as cybersecurity. I will be attending the University of Virginia to get my Bachelor of Science in Computer Science.";
+        let index = 0;
+        function type() {
+            if (index < text.length) {
+                introText.textContent += text.charAt(index);
+                index++;
+                setTimeout(type, 50); // Adjust typing speed (milliseconds)
+            }
+        }
+
+        // Call the type function to start typing effect
+        type();
+    </script>
 </body>
 </html>
