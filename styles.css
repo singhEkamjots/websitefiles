@@ -131,15 +131,3 @@ main {
 .category-description {
     color: #ADD8E6; /* Light blue color for category descriptions */
 }
-.timeline-lines {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-  
-  .timeline-line {
-    position: absolute;
-    border-left: 2px solid #fff; /* Adjust line color */
-  }
-  
