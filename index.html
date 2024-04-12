@@ -88,24 +88,25 @@
             <div class="container">
               <h2>Resume</h2>
               <div class="timeline">
-                <div class="timeline-item">
+                <div class="timeline-item" id="event1">
                   <div class="timeline-content">
-                    <h3>Company Name</h3>
+                    <h3>Company Name 1</h3>
                     <p>Position: Your Position</p>
                     <p>Location: City, State</p>
                     <p>Date: Month Year - Month Year</p>
                     <p>Description: Brief description of your responsibilities and achievements.</p>
                   </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                      <h3>Company Name 2</h3>
-                      <p>Position: Your Position</p>
-                      <p>Location: City, State</p>
-                      <p>Date: Month Year - Month Year</p>
-                      <p>Description: Brief description of your responsibilities and achievements.</p>
-                    </div>
-                  </div>                  
+                <div class="timeline-item" id="event2">
+                  <div class="timeline-content">
+                    <h3>Company Name 2</h3>
+                    <p>Position: Your Position</p>
+                    <p>Location: City, State</p>
+                    <p>Date: Month Year - Month Year</p>
+                    <p>Description: Brief description of your responsibilities and achievements.</p>
+                  </div>
+                </div>
+                <!-- Add more timeline items as needed -->
               </div>
             </div>
           </section>          
@@ -161,6 +162,33 @@
 }
         // Call the type function to start typing effect
         type();
+        // Function to draw lines between timeline events
+function drawLines() {
+  var events = document.querySelectorAll('.timeline-item');
+  var lines = document.createElement('div');
+  lines.className = 'timeline-lines';
+  
+  for (var i = 0; i < events.length - 1; i++) {
+    var event1 = events[i].getBoundingClientRect();
+    var event2 = events[i + 1].getBoundingClientRect();
+    
+    var line = document.createElement('div');
+    line.className = 'timeline-line';
+    line.style.top = (event1.top + event1.height / 2) + 'px';
+    line.style.left = (event1.right) + 'px';
+    line.style.height = (event2.top + event2.height / 2 - event1.top - event1.height / 2) + 'px';
+    
+    lines.appendChild(line);
+  }
+  
+  document.body.appendChild(lines);
+}
+
+// Call drawLines function after the timeline has been loaded
+window.addEventListener('load', function() {
+  drawLines();
+});
+
     </script>
 </body>
 </html>

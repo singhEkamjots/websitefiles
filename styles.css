@@ -131,63 +131,15 @@ main {
 .category-description {
     color: #ADD8E6; /* Light blue color for category descriptions */
 }
-.timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 50px auto;
-  }
-  
-  .timeline-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 50px;
-  }
-  
-  .timeline-item:nth-child(even) .timeline-content {
-    order: 1;
-  }
-  
-  .timeline-content {
-    background: #333;
-    color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  .timeline-content h3,
-  .timeline-content p {
-    margin: 0;
-  }
-  
-  .timeline-item:before {
-    content: '';
+.timeline-lines {
     position: absolute;
-    width: 10px;
-    height: 10px;
-    background: #fff;
-    border-radius: 50%;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 0;
+    left: 0;
+    width: 100%;
   }
   
-  .timeline-item:last-child:before {
-    display: none;
-  }
-  
-  .timeline-item:nth-child(odd) {
-    justify-content: flex-end;
-  }
-  
-  .timeline-item:nth-child(odd):before {
-    right: 50%;
-  }
-  
-  .timeline-item:nth-child(even):before {
-    left: 50%;
-  }
-  
-  .timeline-item:nth-child(odd) .timeline-content {
-    order: 0;
+  .timeline-line {
+    position: absolute;
+    border-left: 2px solid #fff; /* Adjust line color */
   }
   
