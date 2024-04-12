@@ -133,27 +133,23 @@ main {
 }
 .timeline {
     position: relative;
-    margin-top: 40px;
-  }
-
-  .timeline:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 2px;
-    height: 100%;
-    background: #fff; /* Adjust color as needed */
-    transform: translateX(-50%);
+    max-width: 1200px;
+    margin: 50px auto;
   }
   
   .timeline-item {
-    position: relative;
+    display: flex;
+    align-items: center;
     margin-bottom: 50px;
   }
   
+  .timeline-item:nth-child(even) .timeline-content {
+    order: 1;
+  }
+  
   .timeline-content {
-    background: #333; /* Adjust color as needed */
+    background: #333;
+    color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -161,8 +157,37 @@ main {
   
   .timeline-content h3,
   .timeline-content p {
-    color: #fff;
-    margin: 0 0 10px;
+    margin: 0;
   }
-
-
+  
+  .timeline-item:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item:last-child:before {
+    display: none;
+  }
+  
+  .timeline-item:nth-child(odd) {
+    justify-content: flex-end;
+  }
+  
+  .timeline-item:nth-child(odd):before {
+    right: 50%;
+  }
+  
+  .timeline-item:nth-child(even):before {
+    left: 50%;
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-content {
+    order: 0;
+  }
+  
