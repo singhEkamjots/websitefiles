@@ -158,12 +158,12 @@ main {
 }
 
 .timeline-item.left .timeline-content {
-    left: 20px; /* Adjust the distance from the timeline */
+    left: 30px; /* Adjust the distance from the timeline */
     margin-right: 20px; /* Stretch towards the left */
 }
 
 .timeline-item.right .timeline-content {
-    right: 20px; /* Adjust the distance from the timeline */
+    right: 30px; /* Adjust the distance from the timeline */
     margin-left: 20px; /* Stretch towards the right */
 }
 
