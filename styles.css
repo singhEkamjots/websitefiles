@@ -131,3 +131,56 @@ main {
 .category-description {
     color: #ADD8E6; /* Light blue color for category descriptions */
 }
+.timeline-container {
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.timeline {
+    position: relative;
+    padding: 20px 40px;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: #fff;
+}
+
+.timeline-item {
+    padding: 20px 0;
+    margin-left: 20px;
+    position: relative;
+}
+
+.timeline-content {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: auto;
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: -8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/* Additional styles for animations can be added */
