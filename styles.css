@@ -151,19 +151,20 @@ main {
     left: 50%;
     margin-left: -1px; /* Half of the width */
 }
-
 .timeline-item {
     position: relative;
     margin-bottom: 50px; /* Adjust the spacing between timeline items */
+    clear: both; /* Clear floats */
 }
 
-.timeline-item.left .timeline-content {
-    left: 20px; /* Adjust the distance from the timeline */
+.timeline-item.left {
+    float: left; /* Align left */
 }
 
-.timeline-item.right .timeline-content {
-    right: 20px; /* Adjust the distance from the timeline */
+.timeline-item.right {
+    float: right; /* Align right */
 }
+
 /* Add borders to the timeline content boxes */
 /* Add borders to the timeline content boxes */
 /* Add borders to the timeline content boxes */
@@ -214,7 +215,7 @@ main {
     width: 2px; /* Adjust the width as needed */
     background-color: white; /* Adjust the color as needed */
     top: 0;
-    bottom: -50px; /* Extend the line further down */
+    bottom: -1000px; /* Extend the line further down */
     left: calc(50% - 1px); /* Center the line */
     margin-left: -1px; /* Half of the width */
 }
