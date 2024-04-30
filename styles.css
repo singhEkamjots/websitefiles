@@ -135,77 +135,6 @@ main {
     overflow: hidden;
     margin-top: 50px;
 }
-
-.timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px 0;
-}
-
-.timeline:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 2px;
-    background-color: #333;
-    transform: translateX(-50%);
-}
-
-.timeline-item {
-    position: relative;
-    padding: 20px 40px;
-    margin: 20px 0;
-    opacity: 0;
-    transform: translateY(100px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.timeline-item.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.timeline-content {
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.timeline-content h3 {
-    margin-top: 0;
-}
-
-.timeline-item:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -6px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #333;
-    transform: translateY(-50%);
-}
-
-.timeline-item:nth-child(even) .timeline-content {
-    background-color: #e9e9e9;
-}
-* {
-    box-sizing: border-box;
-  }
-  
-  /* Set a background color */
-  body {
-    background-color: #474e5d;
-    font-family: Helvetica, sans-serif;
-  }
-  
-  /* The actual timeline (the vertical ruler) */
- /* Add this to your existing CSS file */
 .timeline {
     position: relative;
     max-width: 800px;
@@ -215,104 +144,52 @@ main {
 .timeline::after {
     content: '';
     position: absolute;
-    width: 6px;
-    background-color: white;
+    width: 2px; /* Adjust the width as needed */
+    background-color: white; /* Adjust the color as needed */
     top: 0;
     bottom: 0;
     left: 50%;
-    margin-left: -3px;
+    margin-left: -1px; /* Half of the width */
 }
 
-.container {
-    padding: 10px 40px;
+.timeline-item {
     position: relative;
-    background-color: inherit;
-    width: 50%;
+    margin-bottom: 50px; /* Adjust the spacing between timeline items */
 }
 
-.container::after {
+.timeline-item.left .timeline-content {
+    left: 20px; /* Adjust the distance from the timeline */
+}
+
+.timeline-item.right .timeline-content {
+    right: 20px; /* Adjust the distance from the timeline */
+}
+
+.timeline-content {
+    position: relative;
+    background-color: white;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item::before {
     content: '';
     position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
-    background-color: white;
-    border: 4px solid #FF9F55;
-    top: 15px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
+    background-color: white; /* Adjust the color as needed */
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 1;
 }
 
-.left {
-    left: 0;
+.timeline-item.left::before {
+    left: -6px; /* Adjust the position */
 }
 
-.right {
-    left: 50%;
+.timeline-item.right::before {
+    right: -6px; /* Adjust the position */
 }
 
-.left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
-}
-
-.right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-}
-
-.right::after {
-    left: -16px;
-}
-
-.content {
-    padding: 20px 30px;
-    background-color: white;
-    position: relative;
-    border-radius: 6px;
-}
-
-@media screen and (max-width: 600px) {
-    .timeline::after {
-        left: 31px;
-    }
-
-    .container {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-
-    .container::before {
-        left: 60px;
-        border: medium solid white;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent;
-    }
-
-    .left::after, .right::after {
-        left: 15px;
-    }
-
-    .right {
-        left: 0%;
-    }
-}
-
-  
