@@ -182,19 +182,30 @@ main {
 }
 
 /* Adjust margin and border color for even items */
-.timeline-item:nth-child(even) .timeline-content {
-    margin-left: auto;
-    margin-right: 50px;
-    border-color: #ADD8E6; /* Light blue border color for even items */
+/* Adjust margin and position for timeline items */
+.timeline-item:nth-child(even) {
+    margin-left: 0;
+    text-align: left;
 }
 
-/* Adjust margin and border color for odd items */
-.timeline-item:nth-child(odd) .timeline-content {
+.timeline-item:nth-child(odd) {
+    margin-left: auto;
+    text-align: right;
+}
+
+/* Adjust margin for timeline content */
+.timeline-item:nth-child(even) .timeline-content {
     margin-left: 50px;
     margin-right: auto;
-    border-color: #ADD8E6; /* Light blue border color for odd items */
+    border-color: #ADD8E6;
 }
 
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: auto;
+    margin-right: 50px;
+    border-color: #ADD8E6;
+}
+border-color: #ADD8E6;
 /* Style for the timeline dots */
 .timeline-item::before {
     content: '';
