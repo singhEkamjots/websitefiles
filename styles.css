@@ -187,6 +187,7 @@ main {
     max-width: 250px; /* Adjusted maximum width */
     text-align: left;
     border: 3px solid #ADD8E6; /* Light blue border color */
+    color:black
 }
 
 /* Adjust margin and border color for even items */
