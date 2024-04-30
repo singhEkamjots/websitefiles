@@ -184,15 +184,41 @@ main {
 /* Adjust margin and border color for even items */
 /* Adjust margin and position for timeline items */
 /* Adjust margin and position for timeline items */
-.timeline-item:nth-child(even) {
+/* Adjust position for timeline items */
+.timeline-item:nth-child(2n) {
     margin-left: auto;
     text-align: right;
 }
 
-.timeline-item:nth-child(odd) {
+.timeline-item:nth-child(2n+1) {
     margin-left: 0;
     text-align: left;
 }
+
+/* Extend the timeline line */
+/* Adjust position for timeline items */
+.timeline-item:nth-child(2n) {
+    margin-left: auto;
+    text-align: right;
+}
+
+.timeline-item:nth-child(2n+1) {
+    margin-left: 0;
+    text-align: left;
+}
+
+/* Extend the timeline line */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px; /* Adjust the width as needed */
+    background-color: white; /* Adjust the color as needed */
+    top: 0;
+    bottom: -50px; /* Extend the line further down */
+    left: calc(50% - 1px); /* Center the line */
+    margin-left: -1px; /* Half of the width */
+}
+
 
 /* Adjust margin for timeline content */
 .timeline-item:nth-child(even) .timeline-content {
