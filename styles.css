@@ -168,17 +168,18 @@ main {
     position: relative;
     background-color: white;
     border-radius: 6px;
-    padding: 20px;
+    padding: 10px; /* Adjust padding as needed */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 400px; /* Adjust the maximum width as needed */
+    max-width: 300px; /* Adjust the maximum width as needed */
+    text-align: left; /* Adjust text alignment */
 }
 
-.timeline-item.left .timeline-content {
-    left: 50px; /* Adjust the distance from the timeline */
+.timeline-item.left {
+    margin-left: 50px; /* Adjust the distance from the left */
 }
 
-.timeline-item.right .timeline-content {
-    right: 50px; /* Adjust the distance from the timeline */
+.timeline-item.right {
+    margin-right: 50px; /* Adjust the distance from the right */
 }
 
 .timeline-item::before {
@@ -194,10 +195,18 @@ main {
 }
 
 .timeline-item.left::before {
-    left: 20px; /* Adjust the position */
+    left: -6px; /* Adjust the position */
 }
 
 .timeline-item.right::before {
-    right: 20px; /* Adjust the position */
+    right: -6px; /* Adjust the position */
 }
 
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.timeline-item:nth-child(even) {
+    text-align: right;
+}
