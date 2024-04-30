@@ -158,6 +158,14 @@ main {
     position: relative;
     padding: 20px 40px;
     margin: 20px 0;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.timeline-item.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .timeline-content {
@@ -187,4 +195,3 @@ main {
     background-color: #e9e9e9;
 }
 
-/* Additional styles for animations can be added */
