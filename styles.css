@@ -165,29 +165,30 @@ main {
     right: 20px; /* Adjust the distance from the timeline */
 }
 /* Add borders to the timeline content boxes */
+/* Add borders to the timeline content boxes */
 .timeline-content {
     position: relative;
     background-color: white;
     border-radius: 6px;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
+    max-width: 250px; /* Adjusted maximum width */
     text-align: left;
-    border: 2px solid #333; /* Border color */
+    border: 2px solid #ADD8E6; /* Light blue border color */
 }
 
 /* Adjust margin and border color for even items */
 .timeline-item:nth-child(even) .timeline-content {
     margin-left: auto;
     margin-right: 50px;
-    border-color: #555; /* Adjust border color for even items */
+    border-color: #ADD8E6; /* Light blue border color for even items */
 }
 
 /* Adjust margin and border color for odd items */
 .timeline-item:nth-child(odd) .timeline-content {
     margin-left: 50px;
     margin-right: auto;
-    border-color: #555; /* Adjust border color for odd items */
+    border-color: #ADD8E6; /* Light blue border color for odd items */
 }
 
 /* Style for the timeline dots */
@@ -201,7 +202,7 @@ main {
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
-    border: 2px solid #333; /* Border color for the timeline dots */
+    border: 2px solid #ADD8E6; /* Light blue border color for timeline dots */
 }
 
 /* Adjust position of timeline dots for left and right items */
