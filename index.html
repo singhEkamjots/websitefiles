@@ -87,28 +87,26 @@
           <section id="resume">
             <div class="container">
                 <h2>Resume</h2>
-                <div class="timeline-container">
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h3>Job Title 1</h3>
-                                <p>Company Name 1</p>
-                                <p>Start Date - End Date</p>
-                                <p>Description of responsibilities and achievements.</p>
-                            </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Job Title 1</h3>
+                            <p>Company Name 1</p>
+                            <p>Start Date - End Date</p>
+                            <p>Description of responsibilities and achievements.</p>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h3>Job Title 2</h3>
-                                <p>Company Name 2</p>
-                                <p>Start Date - End Date</p>
-                                <p>Description of responsibilities and achievements.</p>
-                            </div>
-                        </div>
-                        <!-- Add more timeline items as needed -->
                     </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Job Title 2</h3>
+                            <p>Company Name 2</p>
+                            <p>Start Date - End Date</p>
+                            <p>Description of responsibilities and achievements.</p>
+                        </div>
+                    </div>
+                    <!-- Add more timeline items as needed -->
                 </div>
-            </div>
+            </div>        
         </section>        
         <section id="contact">
             <!-- Your contact form goes here -->
@@ -162,6 +160,24 @@
 }
         // Call the type function to start typing effect
         type();
+        // Add animation when the timeline items come into view
+document.addEventListener('DOMContentLoaded', function () {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+
+    function callbackFunc(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fadeIn'); // Add fadeIn animation class
+            }
+        });
+    }
+
+    const observer = new IntersectionObserver(callbackFunc);
+
+    timelineItems.forEach(item => {
+        observer.observe(item);
+    });
+});
     </script>
 </body>
 </html>
