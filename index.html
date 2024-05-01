@@ -206,19 +206,20 @@
         </section>             
     </main>
     <script>
-         window.addEventListener('scroll', function() {
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    const triggerOffset = 200; // Adjust this offset based on your layout
-
-    timelineItems.forEach(function(item) {
-        const itemTop = item.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-
-        if (itemTop < windowHeight - triggerOffset) {
-            item.classList.add('active');
-        }
-    });
-});
+        window.addEventListener('scroll', function() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            const triggerOffset = 200; // Adjust this offset based on your layout
+    
+            timelineItems.forEach(function(item) {
+                const itemTop = item.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+    
+                if (itemTop < windowHeight - triggerOffset) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    
         function toggleDescription(category) {
             // Hide all descriptions
             var descriptions = document.getElementsByClassName("category-description");
@@ -231,14 +232,20 @@
                 description.style.display = "block";
             }
         }
-
+    
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const yOffset = -100; // Adjust this offset as needed
+                    const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                }
             });
         });
-
+    
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
@@ -247,25 +254,25 @@
                 header.style.backgroundColor = '#333'; // Change back to original color when scrolled back to the top
             }
         });
-
+    
         const introText = document.querySelector('.big-text p');
         const text = "I am a student who has a passion for computer science as well as cybersecurity. I will be attending the University of Virginia to get my Bachelor of Science in Computer Science.";
         let index = 0;
         function type() {
-    console.log("Typing function called");
-    if (index < text.length) {
-        introText.textContent += text.charAt(index);
-        console.log("Current text content:", introText.textContent);
-        index++;
-        setTimeout(type, 50); // Adjust typing speed (milliseconds)
-    } else {
-        console.log("Typing animation completed");
-        // Typing animation for "I love coding!"
-        introText.textContent += " I love coding!"; // Append directly to the introText div
-    }
-}
+            console.log("Typing function called");
+            if (index < text.length) {
+                introText.textContent += text.charAt(index);
+                console.log("Current text content:", introText.textContent);
+                index++;
+                setTimeout(type, 50); // Adjust typing speed (milliseconds)
+            } else {
+                console.log("Typing animation completed");
+                // Typing animation for "I love coding!"
+                introText.textContent += " I love coding!"; // Append directly to the introText div
+            }
+        }
         // Call the type function to start typing effect
         type();
-    </script>
+    </script>    
 </body>
 </html>
