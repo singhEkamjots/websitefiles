@@ -185,54 +185,18 @@
         </section>      
     </main>
     <script>
-        window.addEventListener('scroll', function() {
-            const timelineItems = document.querySelectorAll('.timeline-item');
-            const triggerOffset = 200; // Adjust this offset based on your layout
-    
-            timelineItems.forEach(function(item) {
-                const itemTop = item.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-    
-                if (itemTop < windowHeight - triggerOffset) {
-                    item.classList.add('active');
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const yOffset = -100; // Adjust this offset as needed
+                    const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
                 }
             });
         });
-    
-        function toggleDescription(category) {
-            // Hide all descriptions
-            var descriptions = document.getElementsByClassName("category-description");
-            for (var i = 0; i < descriptions.length; i++) {
-                descriptions[i].style.display = "none";
-            }
-            // Show the description for the clicked category
-            var description = document.getElementById(category + "-description");
-            if (description) {
-                description.style.display = "block";
-            }
-        }
-    
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                const yOffset = -100; // Adjust this offset as needed
-                const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                window.scrollTo({ top: y, behavior: 'smooth' });
-            }
-        });
-    });
-    
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.backgroundColor = '#222'; // Change to a darker color when scrolled
-            } else {
-                header.style.backgroundColor = '#333'; // Change back to original color when scrolled back to the top
-            }
-        });
-    </script>    
+    </script> 
 </body>
 </html>
