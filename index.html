@@ -185,6 +185,17 @@
         </section>      
     </main>
     <script>
+        function toggleDescription(descriptionId) {
+            const descriptions = document.querySelectorAll('.category-description');
+            descriptions.forEach(desc => {
+                if (desc.id === descriptionId + "-description") {
+                    desc.style.display = 'block';
+                } else {
+                    desc.style.display = 'none';
+                }
+            });
+        }
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
