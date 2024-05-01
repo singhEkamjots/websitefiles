@@ -186,13 +186,13 @@
                 <form action="contact.php" method="post">
                     <label for="firstName">First Name:</label>
                     <input type="text" id="firstName" name="firstName" required>
-            
+        
                     <label for="lastName">Last Name:</label>
                     <input type="text" id="lastName" name="lastName" required>
-            
+        
                     <label for="reason">Reason for Contact:</label>
                     <textarea id="reason" name="reason" required></textarea>
-            
+        
                     <button type="submit">Submit</button>
                 </form>
                 <?php
@@ -201,8 +201,9 @@
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     echo "<p>Thank you for your submission!</p>";
                 }
+                ?>
             </div>
-        </section>        
+        </section>             
     </main>
     <script>
          window.addEventListener('scroll', function() {
