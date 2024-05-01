@@ -189,28 +189,24 @@
                 </div>
             </div>        
         </section>
-                <form action="contact.php" method="post" class="contact-form">
-                    <div class="form-group">
-                        <label for="firstName">First Name:</label>
-                        <input type="text" id="firstName" name="firstName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="lastName">Last Name:</label>
-                        <input type="text" id="lastName" name="lastName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="reason">Reason for Contact:</label>
-                        <textarea id="reason" name="reason" required></textarea>
-                    </div>
-                    <button type="submit">Submit</button>
-                </form>
-                <?php
-                // PHP code can be added anywhere within the PHP file.
-                // For example, you can include PHP code to display a message after the form is submitted.
-                if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    echo "<p class='submission-message'>Thank you for your submission!</p>"
+        <form action="contact.php" method="post" class="contact-form">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
             </div>
-        </section>        
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="reason">Reason for Contact:</label>
+                <textarea id="reason" name="reason" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+
+        </div> <!-- Close the container div -->
+        </section> <!-- Close the section -->        
     </main>
     <script>
         window.addEventListener('scroll', function() {
