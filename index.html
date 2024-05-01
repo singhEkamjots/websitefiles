@@ -183,7 +183,7 @@
         <section id="contact">
             <div class="container">
                 <h2>Contact</h2>
-                <form action="contact.php" method="post">
+                <form action="contact.php" method="post" class="contact-form">
                     <div class="form-group">
                         <label for="firstName">First Name:</label>
                         <input type="text" id="firstName" name="firstName" required>
@@ -202,11 +202,9 @@
                 // PHP code can be added anywhere within the PHP file.
                 // For example, you can include PHP code to display a message after the form is submitted.
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    echo "<p>Thank you for your submission!</p>";
-                }
-                ?>
-            </div>        
-        </section>             
+                    echo "<p class='submission-message'>Thank you for your submission!</p>"
+            </div>
+        </section>        
     </main>
     <script>
         window.addEventListener('scroll', function() {
