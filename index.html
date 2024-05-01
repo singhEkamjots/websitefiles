@@ -163,10 +163,7 @@
                 </div>
                 <div class="project">
                     <div class="project-image">
-                        <div class="lightbox" id="lightbox">
-                            <span class="close-btn" onclick="closeLightbox()">&times;</span>
-                            <img id="popupImage" src="Images/music.png" alt="Music Player">
-                        </div>
+                        <img src="Images/music.png" alt="Music Player">
                     </div>
                     <div class="project-description">
                          <h3>Music Player Website</h3>
@@ -175,6 +172,10 @@
                 </div>
             </div>
         </section>      
+        <div class="lightbox" id="lightbox">
+            <span class="close-btn" onclick="closeLightbox()">&times;</span>
+            <img id="popupImage" src="Images/music.png" alt="Popup Image">
+        </div>
         <script>
             // Function to open the lightbox popup and display the clicked image
             function openLightbox(imageSrc) {
