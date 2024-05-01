@@ -191,12 +191,14 @@
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    const yOffset = -100; // Adjust this offset as needed
-                    const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                    window.scrollTo({ top: y, behavior: 'smooth' });
+                    const offset = targetElement.offsetTop - 100; // Adjust offset as needed
+                    window.scrollTo({
+                        top: offset,
+                        behavior: 'smooth'
+                    });
                 }
             });
         });
-    </script> 
+    </script>    
 </body>
 </html>
