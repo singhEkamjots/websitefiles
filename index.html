@@ -163,7 +163,10 @@
                 </div>
                 <div class="project">
                     <div class="project-image">
-                        <img src="Images/music.png" alt="Music Player">
+                        <div class="lightbox" id="lightbox">
+                            <span class="close-btn" onclick="closeLightbox()">&times;</span>
+                            <img id="popupImage" src="Images/music.png" alt="Music Player">
+                        </div>
                     </div>
                     <div class="project-description">
                          <h3>Music Player Website</h3>
@@ -172,10 +175,6 @@
                 </div>
             </div>
         </section>      
-        <div class="lightbox" id="lightbox">
-            <span class="close-btn" onclick="closeLightbox()">&times;</span>
-            <img id="popupImage" src="" alt="Popup Image">
-        </div>
         <script>
             // Function to open the lightbox popup and display the clicked image
             function openLightbox(imageSrc) {
@@ -193,11 +192,11 @@
         
             // Add click event listeners to the project image containers
             document.getElementById('project1').addEventListener('click', function() {
-                openLightbox(this.querySelector('Images/website.png').src);
+                openLightbox(this.querySelector('img').src);
             });
         
             document.getElementById('project2').addEventListener('click', function() {
-                openLightbox(this.querySelector('Images/music.png').src);
+                openLightbox(this.querySelector('img').src);
             });
         </script>
         <section id="contact">
