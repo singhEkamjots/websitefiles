@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a; /* Darker background color for better contrast */
+    background-color: #1a1a1a; 
     color: #fff;
 }
 
@@ -13,7 +13,13 @@ header {
     text-align: center;
     position: relative;
 }
-
+header img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+    border: 2px solid #ADD8E6; 
+}
 nav ul {
     list-style: none;
     margin: 0;
@@ -84,7 +90,7 @@ h1 {
     width: 150px;
     height: 150px;
     margin-top: 10px;
-    border: 2px solid #fff; /* Adding a white border around the profile picture */
+    border: 2px solid #fff; 
 }
 .skills-cards {
     display: flex;
@@ -125,11 +131,11 @@ main {
 }
 
 .passion-text {
-    color: #ADD8E6; /* Light blue color */
+    color: #ADD8E6;
 }
 
 .category-description {
-    color: #ADD8E6; /* Light blue color for category descriptions */
+    color: #ADD8E6; 
 }
 .timeline-container {
     overflow: hidden;
@@ -144,27 +150,27 @@ main {
 .timeline::after {
     content: '';
     position: absolute;
-    width: 2px; /* Adjust the width as needed */
-    background-color: white; /* Adjust the color as needed */
+    width: 2px; 
+    background-color: white; 
     top: 0;
     bottom: 0;
     left: 50%;
-    margin-left: -1px; /* Half of the width */
+    margin-left: -1px; 
 }
 
 .timeline-item {
     position: relative;
-    margin-bottom: 50px; /* Adjust the spacing between timeline items */
+    margin-bottom: 50px; 
 }
 
 .timeline-item.left .timeline-content {
-    left: 30px; /* Adjust the distance from the timeline */
-    margin-right: 20px; /* Stretch towards the left */
+    left: 30px; 
+    margin-right: 20px; 
 }
 
 .timeline-item.right .timeline-content {
-    right: 30px; /* Adjust the distance from the timeline */
-    margin-left: 20px; /* Stretch towards the right */
+    right: 30px; 
+    margin-left: 20px; 
 }
 
 
@@ -180,31 +186,31 @@ main {
     border-color: #ADD8E6;
 }
 
-/* Add borders to the timeline content boxes */
+
 .timeline-content {
     position: relative;
     background-color: white;
     border-radius: 6px;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 250px; /* Adjusted maximum width */
+    max-width: 250px; 
     text-align: left;
-    border: 3px solid #ADD8E6; /* Light blue border color */
+    border: 3px solid #ADD8E6;
     color:black
 }
 
-/* Adjust margin and border color for even items */
+
 .timeline-item:nth-child(even) .timeline-content {
     margin-left: auto;
     margin-right: 50px;
-    border-color: #ADD8E6; /* Light blue border color for even items */
+    border-color: #ADD8E6; 
 }
 
-/* Adjust margin and border color for odd items */
+
 .timeline-item:nth-child(odd) .timeline-content {
     margin-left: 50px;
     margin-right: auto;
-    border-color: #ADD8E6; /* Light blue border color for odd items */
+    border-color: #ADD8E6; 
 }
 
 /* Style for the timeline dots */
@@ -218,10 +224,10 @@ main {
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
-    border: 3px solid #ADD8E6; /* Light blue border color for timeline dots */
+    border: 3px solid #ADD8E6;
 }
 
-/* Adjust position of timeline dots for left and right items */
+
 .timeline-item.left::before {
     left: -6px;
 }
@@ -299,14 +305,14 @@ button[type="submit"]:hover {
 }
 
 .submission-message {
-    color: #4CAF50; /* Green color for submission message */
+    color: #4CAF50;
     margin-top: 20px;
 }
 .contact-info {
     text-align: center;
-    margin-top: 40px; /* Adjust as needed for spacing */
+    margin-top: 40px; 
 }
 
 .contact-info p {
-    margin-bottom: 10px; /* Adjust as needed for spacing */
+    margin-bottom: 10px; 
 }
