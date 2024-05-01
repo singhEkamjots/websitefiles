@@ -12,6 +12,13 @@
             color: #333; 
             margin-bottom: 20px; 
         }
+        nav {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 150px; /* Adjust the width as needed */
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -171,35 +178,7 @@
                     </div>
                 </div>
             </div>
-        </section>      
-        <div class="lightbox" id="lightbox">
-            <span class="close-btn" onclick="closeLightbox()">&times;</span>
-            <img id="popupImage" src="Images/music.png" alt="Popup Image">
-        </div>
-        <script>
-            // Function to open the lightbox popup and display the clicked image
-            function openLightbox(imageSrc) {
-                const lightbox = document.getElementById('lightbox');
-                const popupImage = document.getElementById('popupImage');
-                popupImage.src = imageSrc;
-                lightbox.style.display = 'block';
-            }
-        
-            // Function to close the lightbox popup
-            function closeLightbox() {
-                const lightbox = document.getElementById('lightbox');
-                lightbox.style.display = 'none';
-            }
-        
-            // Add click event listeners to the project image containers
-            document.getElementById('project1').addEventListener('click', function() {
-                openLightbox(this.querySelector('img').src);
-            });
-        
-            document.getElementById('project2').addEventListener('click', function() {
-                openLightbox(this.querySelector('img').src);
-            });
-        </script>
+        </section>         
         <section id="contact">
             <div class="container">
                 <h2>Contact</h2>
@@ -219,14 +198,12 @@
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    const offset = targetElement.offsetTop - 100; // Adjust offset as needed
-                    window.scrollTo({
-                        top: offset,
-                        behavior: 'smooth'
-                    });
+                    const yOffset = -100; // Adjust this offset as needed
+                    const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
                 }
             });
         });
-    </script>    
+    </script> 
 </body>
 </html>
