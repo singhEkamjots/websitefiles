@@ -302,3 +302,11 @@ button[type="submit"]:hover {
     color: #4CAF50; /* Green color for submission message */
     margin-top: 20px;
 }
+.contact-info {
+    text-align: center;
+    margin-top: 40px; /* Adjust as needed for spacing */
+}
+
+.contact-info p {
+    margin-bottom: 10px; /* Adjust as needed for spacing */
+}
