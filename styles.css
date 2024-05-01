@@ -14,10 +14,6 @@ header {
     position: relative;
 }
 header img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin-top: 10px;
     border: 2px solid #ADD8E6; 
 }
 nav ul {
