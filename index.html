@@ -191,16 +191,7 @@
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    let yOffset = -100; // Default offset
-                    if (targetId === "#projects" || targetId === "#contact") {
-                        yOffset = 0; // No offset for projects and contact
-                    } else {
-                        // Calculate offset based on the section's position
-                        const headerHeight = document.querySelector('header').offsetHeight;
-                        yOffset = headerHeight > 100 ? -headerHeight : yOffset;
-                    }
-                    const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                    window.scrollTo({ top: y, behavior: 'smooth' });
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
